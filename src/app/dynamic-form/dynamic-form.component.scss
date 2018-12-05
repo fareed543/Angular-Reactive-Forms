@@ -1,0 +1,10 @@
+.form-row{
+  margin:12px 20px;
+}
+.field_container{
+  display: flex;
+  margin-bottom: 10px;
+}
+.field_container > label,.field_container > div{
+  flex: 1 0 50%;
+}

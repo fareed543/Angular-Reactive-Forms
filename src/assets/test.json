@@ -1,0 +1,45 @@
+{
+"name": "\"Name\"",
+"getAPI": "\"https://test.io/get\"",
+"setAPI": "\"https://test.io/post\"",
+"schema": [
+  
+  {
+  "Type": "TextBox",
+  "Default": "\"10\"",
+  "HelpText": "\"This is UUID\"",
+  "Required": "\"True\"",
+  "Label": "\"UUID\""
+},
+{
+  "Type": "TextBox",
+  "Default": "\"10\"",
+  "HelpText": "\"Project Name\"",
+  "Required": "\"false\"",
+  "Label": "\"ProjectID\""
+},
+{
+  "Type": "CheckBox",
+  "Default": "\"1\"",
+  "HelpText": "\"Working..\"",
+  "Required": "\"False\"",
+  "Label": "\"Is Working\""
+},
+{
+  "Type": "Radio",
+  "Group":"\"DGroup\"",
+  "Default": "\"0\"",
+  "HelpText": "\"Device Group\"",
+  "Required": "\"True\"",
+  "Label": "\"Active\""
+},
+{
+  "Type": "Radio",
+  "Group":"\"DGroup\"",
+  "Default": "\"10\"",
+  "HelpText": "\"Device Group\"",
+  "Required": "\"True\"",
+  "Label": "\"Passive\""
+}
+ 
+]}

@@ -1,0 +1,81 @@
+<div class="android-more-section">
+    <div class="android-section-title mdl-typography--display-1-color-contrast"> Leave a Message.</div>
+    <div class="android-card-container mdl-grid">
+
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
+          <form class="example-form" [formGroup]="contactForm">
+        <div class="mdl-card__supporting-text">
+          
+           
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Name"  formControlName="name">
+                </mat-form-field>
+  
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Phone"  formControlName="phone">
+                </mat-form-field>
+  
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Subject" formControlName="subject">
+                </mat-form-field>
+              
+                <mat-form-field class="example-full-width">
+                  <textarea matInput placeholder="Leave a Message" formControlName="message"></textarea>
+                </mat-form-field>
+
+
+            
+              
+
+        </div>
+
+        <div class="mdl-card__actions">
+            <input type="submit" mat-button value="Submit">
+            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase">
+              Submit
+              <i class="material-icons">chevron_right</i>
+            </a>
+         </div>
+
+      </form>
+        
+      </div>
+
+
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
+        
+          <div class="mdl-card__supporting-text">
+            
+              <mat-list role="list">
+                <mat-list-item role="listitem">Mohammad Abdul Fareed</mat-list-item>
+                <mat-list-item role="listitem">Email : fareed543@gmail.com</mat-list-item>
+                <mat-list-item role="listitem">Call : 72075536743</mat-list-item>
+                <mat-list-item role="listitem">Address : Tekzenit India Private Limited.</mat-list-item>
+              </mat-list>
+             
+                
+          </div>
+          
+        </div>
+
+    </div>
+  </div>
+
+Form Status : 
+<pre>
+  {{contactForm.value | json}}
+</pre>
+<pre>
+  {{contactForm.status}}
+  {{contactForm.get('name').errors | json}}
+</pre>
+
+
+
+
+
+
+
+
+
+

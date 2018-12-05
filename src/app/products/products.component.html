@@ -1,0 +1,24 @@
+<div class="android-more-section">
+    <div class="android-section-title mdl-typography--display-1-color-contrast">{{title}}</div>
+    <div class="android-card-container mdl-grid">
+
+      <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp" *ngFor="let service of services">
+        <div class="mdl-card__media">
+          <img src="assets/images/{{service.image}}">
+        </div>
+        <div class="mdl-card__title">
+           <h4 class="mdl-card__title-text">{{service.title}}</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <span class="mdl-typography--font-light mdl-typography--subhead">{{service.description}}</span>
+        </div>
+        <div class="mdl-card__actions">
+           <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+             Make the switch
+             <i class="material-icons">chevron_right</i>
+           </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
