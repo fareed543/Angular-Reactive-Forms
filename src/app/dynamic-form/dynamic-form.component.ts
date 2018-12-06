@@ -8,21 +8,17 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./dynamic-form.component.scss']
 })
 export class DynamicFormComponent implements OnInit {
-  formName: string;
   formSavedFlag: boolean = false;
   formElements: any;
    public myForm: FormGroup;
    public tempArray = {};
-   loading = false;
-  // publi myForm = new FormGroup({});
+   isLoading = false;
   constructor(
     private angularService: AngularService
   ) { }
 
   ngOnInit() {
     this.angularService.getJSON().subscribe(data => {
-      console.log(data);
-      this.formName = data.name;
       this.formElements = data.schema;
       this.formElements.forEach(element => {
         if (element.Type == 'Radio') {
@@ -33,9 +29,8 @@ export class DynamicFormComponent implements OnInit {
           : new FormControl(element.Default || '');
         }
       });
-
       this.myForm = new FormGroup(this.tempArray);
-      this.loading = true;
+      this.isLoading = true;
     });
   }
 

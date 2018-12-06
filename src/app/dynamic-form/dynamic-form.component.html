@@ -2,7 +2,7 @@
   <div class="android-section-title mdl-typography--display-1-color-contrast"> Dynamic Form</div>
   <div class="android-card-container mdl-grid">
 
-    <div *ngIf="loading" [formGroup]="myForm" class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
+    <div *ngIf="isLoading" [formGroup]="myForm" class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
 
       <div *ngFor="let field of formElements" class="form-row">
         <div class="field_container">
@@ -12,8 +12,6 @@
               <input [formControlName]="field.Label" [id]="field.Label" [type]="field.Type">
               Hint: {{field.HelpText}}
             </div>
-
-
 
             <div *ngSwitchCase="'CheckBox'">
               <label [attr.for]="field.Label">{{field.Label}}</label>
@@ -42,8 +40,8 @@
 
         Output Values :
         <pre>
-              {{myForm.value | json}}
-            </pre>
+		  {{myForm.value | json}}
+		</pre>
       </div>
     </div>
   </div>
